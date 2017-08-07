@@ -20,15 +20,19 @@ for (var i = 0; i < hand.length; i++) {
     card = 10;
     sum += card
   } else if (hand[i] === "A") {
-    card = 11
+    card = 1
     sum += card;
   }
   else {
    sum = sum + parseInt(hand[i])
 console.log(sum)
   }
+} for (var i = 0; i < hand.length; i++) {
+  if (hand[i] === "A" && sum < 12) {
+    sum += 10
+  }
 }
-return; sum
+return sum
 
 }
 
